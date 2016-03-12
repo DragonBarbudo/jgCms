@@ -2,28 +2,29 @@
 <div class="page_content col-md-7 col-lg-7 col-sm-7 col-xs-12" ng-controller="SettingCtrl">
 	<div class="panel panel-default">
 
-	  <div class="panel-heading">Settings</div>
+	  <div class="panel-heading">Ajustes de cuenta</div>
 	  <div class="panel-body">
 	  	<div bs-active-pane="activeTab" bs-tabs bs-active-pane="activeTab">
 			<div title="Account" bs-pane>
 				<br>
 				<div class="form-group-sm">
 					<div class="form-group col-md-12">
-				    	<label>Username</label>
+				    	<label>Usuario</label>
 				    	<input type="text" class="form-control" ng-model="setting.username">
 				  	</div>
 				  	<div class="form-group col-md-12">
-				    	<label>New Password</label>
+				    	<label>Nueva contraseña</label>
 				    	<input type="password" class="form-control" ng-model="setting.password">
 				  	</div>
 				</div>
 			</div>
+			<!--
 			<div title="Store" bs-pane>
 				<br>
 				<div class="form-group-sm">
 					<div class="form-group col-md-6">
 				    	<label>Currency</label>
-				    	
+
 				    	<input type="text" class="form-control text-uppercase" ng-model="setting.currency">
 				    	<small>It only change the CMS currency not the app currency</small>
 				  	</div>
@@ -35,8 +36,8 @@
 				    	<label>Payment Type</label>
 				    	<div class="radio">
 				    		<label>
-				    			<input name="payment_type" type="radio" value="paypal-cash" ng-model="setting.payment_type"> PayPal Gateway & Cash Delivery 
-				    		</label>	
+				    			<input name="payment_type" type="radio" value="paypal-cash" ng-model="setting.payment_type"> PayPal Gateway & Cash Delivery
+				    		</label>
 				    	</div>
 				    	<div class="radio">
 				    		<label>
@@ -45,18 +46,18 @@
 				    	</div>
 				    	<div class="radio">
 				    		<label>
-				    			<input name="payment_type" type="radio" ng-model="setting.payment_type" value="paypal"> Only PayPal Gateway	
+				    			<input name="payment_type" type="radio" ng-model="setting.payment_type" value="paypal"> Only PayPal Gateway
 				    		</label>
 				    	</div>
-				    	
-				    	
+
+
 
 				  	</div>
 				</div>
-			</div>
+			</div> -->
 			<hr class="width-100">
 		  	<div class="col-xs-12">
-		  		<button type="submit" class="btn btn-success" ng-click="save()">Save Changes</button>
+		  		<button type="submit" class="btn btn-success" ng-click="save()">Guardar</button>
 		  	</div>
 		</div>
 	  </div>
