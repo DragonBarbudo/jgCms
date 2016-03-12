@@ -10,45 +10,45 @@
 
 <div class="page_content col-md-7 col-lg-7 col-sm-7 col-xs-12" ng-controller="ProductsEditCtrl">
 	<div class="panel panel-default">
-	  <div class="panel-heading">Add/Edit Product</div>
+	  <div class="panel-heading">Añadir / Editar producto</div>
 	  <div class="panel-body">
 		<!-- bsActivePane is optional -->
 		<div bs-active-pane="activeTab" bs-tabs>
-		  <div title="Details" bs-pane>
+		  <div title="Detalles" bs-pane>
 		  	<form class="form-group-sm" ng-submit="save()">
 			  <div class="form-group col-md-12">
-			    <label>Name</label>
+			    <label>Nombre</label>
 			    <input type="text" class="form-control" ng-model="product.name">
 			  </div>
 			  <div class="form-group col-md-12">
-			    <label>Description</label>
+			    <label>Descripción</label>
 			    <textarea rows="3" class="form-control" ng-model="product.description"></textarea>
 			  </div>
 			  <div class="form-group col-xs-3">
-			    <label>Old Price ({{currency}})</label>
+			    <label>Precio pre-oferta ({{currency}})</label>
 			    <input class="form-control" type="text" ng-model="product.old_price">
 			  </div>
 			  <div class="form-group col-xs-3">
-			    <label>New Price ({{currency}})</label>
+			    <label>Precio ({{currency}})</label>
 			    <input class="form-control" type="text" ng-model="product.new_price">
 			  </div>
 			  <div class="form-group col-md-12">
-			    <label>Category</label>
+			    <label>Categoría</label>
 			    <select ng-model="product.categories_id"
 			    ng-options="category.id as category.name for category in categories" class="form-control width-30">
 			    </select>
 			  </div>
 			  <div class="form-group col-md-6">
-			    <label>Quantity</label>
+			    <label>Cantidad</label>
 			    <input class="form-control width-40" type="number" min="1" ng-model="product.quantity">
 			  </div>
 			  <div class="form-group col-md-6">
-			    <label>Tax Rate (%)</label>
+			    <label>(%)</label>
 			    <input class="form-control width-40" type="number" ng-model="product.tax_rate">
 			  </div>
 
 			  <div class="form-group col-md-12">
-			    <label>Specification</label>
+			    <label>Especificaciones</label>
 			    <br>
 			    <label class="width-100">
 			        <input ng-value="0" type="radio" name="spec" ng-model="product.spec_ids"> None
@@ -59,19 +59,19 @@
 			  </div>
 			  <div class="form-group col-md-12" ng-show="!product.editMode">
 			  	<hr class="width-100">
-			    <h4 class="text-info">Would you like to publish your product?</h4>
+			    <h4 class="text-info">¿Publicar producto?</h4>
 			    <br>
 			    <label class="width-100">
-			        <input type="radio" name="visi" ng-model="product.visibility" ng-value="1"> Yes, I want
+			        <input type="radio" name="visi" ng-model="product.visibility" ng-value="1"> Sí
 			    </label>
 			    <label class="width-100">
-			        <input type="radio" name="visi" ng-model="product.visibility" ng-value="0"> No, not yet
+			        <input type="radio" name="visi" ng-model="product.visibility" ng-value="0"> No
 			    </label>
 			  </div>
 			  <hr class="width-100">
 			  <div class="col-xs-12">
-			  	<button type="submit" class="btn btn-success">Save Changes</button>
-			  	<a ng-show="editMode" class="btn btn-link pull-right" ng-click="remove()">Delete</a>
+			  	<button type="submit" class="btn btn-success">Guardar</button>
+			  	<a ng-show="editMode" class="btn btn-link pull-right" ng-click="remove()">Eliminar producto</a>
 			  </div>
 
 			</form>
@@ -80,7 +80,7 @@
 		  	<div class="image-upload" ng-repeat="image in product.images">
 		  		<div class="col-xs-6 ">
 		  			<img src="{{url}}{{image}}" class="img-thumbnail width-100">
-		  			<button type="button" ng-click="removeImage(image)" class="btn btn-default btn-sm">Delete</button>
+		  			<button type="button" ng-click="removeImage(image)" class="btn btn-default btn-sm">Eliminar</button>
 		  		</div>
 		  	</div>
 

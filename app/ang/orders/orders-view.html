@@ -6,16 +6,16 @@
 		<div bs-active-pane="activeTab" bs-tabs>
 		  <div title="Basic Info" bs-pane>
 		  	<div class="page-header">
-			  <h1><small>Basic Info</small></h1>
+			  <h1><small>Información básica</small></h1>
 			</div>
 			<div class="table-responsive">
 			    <table class="table table-hover">
 			      <thead>
 			        <tr>
-			          <th>Code</th>
-			          <th>Total Amount</th>
-			          <th>Payment Method</th>
-			          <th>Date & Time</th>
+			          <th>Código</th>
+			          <th>Total de comrpa</th>
+			          <th>Pago</th>
+			          <th>Fecha y Hora</th>
 			        </tr>
 			      </thead>
 			      <tbody>
@@ -31,7 +31,7 @@
 		  </div>
 		  <div title="Customer Details" bs-pane>
 		  	<div class="page-header">
-			  <h1><small>Customer Details</small></h1>
+			  <h1><small>Detalles de usuario</small></h1>
 			</div>
 			<div class="table-responsive">
 			    <table class="table table-hover">
@@ -40,7 +40,7 @@
 			    		<th>#</th>
 			    	</thead>
 			    	<tr>
-			    		<td>Full Name</td>
+			    		<td>Nombre completo</td>
 			    		<td>{{order.customer_firstname}} {{order.customer_lastname}}</td>
 			    	</tr>
 			    	<tr>
@@ -60,7 +60,7 @@
 			    		<td ng-bind="order.customer_address"></td>
 			    	</tr>
 			    	<tr>
-			    		<td>Email Address</td>
+			    		<td>Correo electrónico</td>
 			    		<td ng-bind="order.customer_email_address"></td>
 			    	</tr>
 			    	<tr>
@@ -80,26 +80,26 @@
 		  </div>
 		  <div title="Items" bs-pane>
 		  	<div class="page-header">
-			  <h1><small>Products Ordered</small></h1>
+			  <h1><small>Productos del pedido</small></h1>
 			</div>
 			<div class="table-responsive" ng-repeat="item in items track by $index">
 			    <table class="table table-hover">
 			    	<thead>
-			    		<th>Name</th>
+			    		<th>Nombre</th>
 			    		<th ng-bind="item.product_name"></th>
 			    	</thead>
 			    	<tr>
-			    		<td>Price</td>
+			    		<td>Costo</td>
 			    		<td>{{currency}}{{item.product_price}}</td>
 			    	</tr>
 			    	<tr>
-			    		<td>Quantity</td>
+			    		<td>Cantidad</td>
 			    		<td ng-bind="item.product_quantity"></td>
 			    	</tr>
 			    	<tr>
-			    		<td>Category</td>
+			    		<td>Categoría</td>
 			    		<td ng-bind="item.product_category"></td>
-			    	</tr> 
+			    	</tr>
 			    	<tr ng-repeat="spec in item.product_spec">
 			    		<td ng-bind="spec.title"></td>
 			    		<td ng-bind="spec.value"></td>
@@ -109,8 +109,8 @@
 		  </div>
 		</div>
 
-		
-	  
+
+
 	  </div>
 	</div>
 </div>
